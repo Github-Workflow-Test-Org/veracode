@@ -1,12 +1,12 @@
 veracode_static_scan:
   push:
-    trigger: true
+    trigger: false
     branches_to_run:
       - '*'
     branches_to_exclude:
       - branch-1
   pull_request:
-    trigger: false
+    trigger: true
     action:
       - opened
       - synchronize
