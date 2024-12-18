@@ -87,7 +87,7 @@ jobs:
 
   pipeline_scan:
     runs-on: ubuntu-latest
-    needs: prepare_pipeline_scan
+    needs: [register, validations, prepare_pipeline_scan]
     strategy:
       matrix:
         file: ${{fromJson(needs.prepare_pipeline_scan.outputs.matrix_files)}}
