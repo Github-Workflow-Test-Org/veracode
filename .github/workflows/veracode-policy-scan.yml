@@ -180,8 +180,12 @@ jobs:
           github-token: ${{ inputs.token }}
           commitHash: ${{ inputs.sha }}
 
-      - name: cleanup job
+  cleanup:
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Cleanup workspace and Docker
         if: always()
         run: |
-          echo "Running cleanup..."
+          echo "Running final cleanup..."
           sudo rm -rf $GITHUB_WORKSPACE/
