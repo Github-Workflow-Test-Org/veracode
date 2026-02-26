@@ -19,7 +19,7 @@ veracode_static_scan:
     Veracode static scan faced a problem. Please contact your Veracode
     administrator for more information.
   policy: Veracode Recommended Medium + SCA
-  create_code_scanning_alert: false
+  create_code_scanning_alert: true
   create_issue: true
   issues:
     trigger: false
